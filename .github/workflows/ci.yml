@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out
+      uses: actions/checkout@v2.3.3
+    - name: Run install
+      run: make install
+      continue-on-error: false
+    - name: Run download
+      run: make download
+      continue-on-error: false
+    - name: Run build
+      run: make build
+      continue-on-error: false
+    - name: Run delivery
+      run: make delivery
+      continue-on-error: false
