@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo apt update
 sudo apt install -y bazel
 sudo apt install -y zip
 
