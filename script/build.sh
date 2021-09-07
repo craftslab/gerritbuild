@@ -3,15 +3,17 @@
 # Build Gerrit
 # Download: $HOME/.gerritcodereview
 # Release: /path/to/gerrit/bazel-bin/release.war
+pushd gerrit
 version=${RELEASE_VERSION}
 ./tools/version.py $version
 git tag -m "$version" "$version"
 git submodule foreach git tag -m "$version" "$version"
 bazel build release
+popd
 
 # Build Plugins (optional)
 # Release: /path/to/gerrit/bazel-genfiles/plugins/*.jar
-#pushd source/gerrit
+#pushd gerrit
 #bazel build plugins/codemirror-editor
 #bazel build plugins/commit-message-length-validator
 #bazel build plugins/delete-project
