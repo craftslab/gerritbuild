@@ -13,7 +13,7 @@ popd || exit
 
 # Build Plugins (optional)
 # Release: /path/to/gerrit/bazel-genfiles/plugins/*.jar
-#pushd gerrit
+#pushd gerrit || exit
 #bazel build plugins/codemirror-editor
 #bazel build plugins/commit-message-length-validator
 #bazel build plugins/delete-project
@@ -25,4 +25,4 @@ popd || exit
 #bazel build plugins/reviewnotes
 #bazel build plugins/singleusergroup
 #bazel build plugins/webhooks
-#popd
+#popd || exit
