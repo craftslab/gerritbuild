@@ -1,0 +1,25 @@
+From f881d8e8bbb11835b978f72413549498d5c83869 Mon Sep 17 00:00:00 2001
+From: Jia Jia <angersax@sina.com>
+Date: Sun, 4 Jul 2021 20:31:52 +0800
+Subject: [PATCH 1/2] Replace 'Updated' with 'Submitted' in change table
+
+---
+ .../app/mixins/gr-change-table-mixin/gr-change-table-mixin.ts   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/polygerrit-ui/app/mixins/gr-change-table-mixin/gr-change-table-mixin.ts b/polygerrit-ui/app/mixins/gr-change-table-mixin/gr-change-table-mixin.ts
+index 28b7a50ac2..83657b61f8 100644
+--- a/polygerrit-ui/app/mixins/gr-change-table-mixin/gr-change-table-mixin.ts
++++ b/polygerrit-ui/app/mixins/gr-change-table-mixin/gr-change-table-mixin.ts
+@@ -44,7 +44,7 @@ export const ChangeTableMixin = dedupingMixin(
+         'Comments',
+         'Repo',
+         'Branch',
+-        'Updated',
++        'Submitted',
+         'Size',
+       ];
+ 
+-- 
+2.33.0
+
