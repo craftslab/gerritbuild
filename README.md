@@ -12,6 +12,21 @@
 
 
 
+## Run
+
+```bash
+git clone https://github.com/craftslab/gerritbuild.git
+
+pushd gerritbuild || exit
+
+GERRIT_TAG=v3.4.1; git tag $GERRIT_TAG
+git push --tags origin master
+
+popd || exit
+```
+
+
+
 ## Reference
 
 - [Making a Gerrit Release](https://gerrit-documentation.storage.googleapis.com/Documentation/3.4.1/dev-release.html)

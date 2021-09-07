@@ -13,14 +13,25 @@ jobs:
     - name: Set env
       run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
     - name: Run install
-      run: make install
+      shell: bash
+      run: |
+        ./script/install.sh
       continue-on-error: false
     - name: Run download
-      run: make download
+      shell: bash
+      run: |
+        ./script/download.sh
       continue-on-error: false
     - name: Run build
-      run: make build
+      shell: bash
+      run: |
+        ./script/build.sh
       continue-on-error: false
     - name: Run delivery
-      run: make delivery
+      shell: bash
+      env:
+        USER: ${{ secrets.JFROG_CLOUD_USER }}
+        TOKEN: ${{ secrets.JFROG_CLOUD_TOKEN }}
+      run: |
+        ./script/delivery.sh
       continue-on-error: false
