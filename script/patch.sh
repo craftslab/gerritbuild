@@ -1,5 +1,9 @@
 #!/bin/bash
 
+TAG=${RELEASE_VERSION}
+
 pushd gerrit || exit
-git am ../patch/*.patch
+if [ -d ../patch/$TAG ]; then
+    git am ../patch/$TAG/*.patch
+fi
 popd || exit
