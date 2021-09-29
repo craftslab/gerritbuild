@@ -1,0 +1,25 @@
+From 4030b56263ddf78a3476818f5c24c3209555abb7 Mon Sep 17 00:00:00 2001
+From: Jia Jia <angersax@sina.com>
+Date: Wed, 29 Sep 2021 21:03:33 +0800
+Subject: [PATCH] Set version to 3.3.6
+
+---
+ java/com/google/gerrit/common/Version.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/java/com/google/gerrit/common/Version.java b/java/com/google/gerrit/common/Version.java
+index 6197be5950..9723bfd050 100644
+--- a/java/com/google/gerrit/common/Version.java
++++ b/java/com/google/gerrit/common/Version.java
+@@ -31,7 +31,7 @@ public class Version {
+   private static final String VERSION;
+ 
+   public static String getVersion() {
+-    return VERSION;
++    return "3.3.6";
+   }
+ 
+   static {
+-- 
+2.25.1
+
