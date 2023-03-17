@@ -29,5 +29,6 @@ popd || exit
 
 ## Reference
 
+- [gerritdeploy](https://github.com/craftslab/gerritdeploy)
 - [gerritdocker](https://github.com/craftslab/gerritdocker)
 - [Making a Gerrit Release](https://gerrit-documentation.storage.googleapis.com/Documentation/3.4.1/dev-release.html)
